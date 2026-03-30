@@ -26,3 +26,5 @@ def info():
 @app.route("/env")
 def env():
     return {"env": os.getenv("ENV")}
+
+db_url = os.getenv("DATABASE_URL")
