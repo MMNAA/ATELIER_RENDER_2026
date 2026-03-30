@@ -22,3 +22,7 @@ def info():
         "student": "NJIME-AKWA Moudio",
         "version": "v1"
     }
+
+@app.route("/env")
+def env():
+    return {"env": os.getenv("ENV")}
