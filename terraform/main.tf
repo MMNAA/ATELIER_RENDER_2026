@@ -34,3 +34,4 @@ env_vars = {
     value = "production"
   }
 }
+}
