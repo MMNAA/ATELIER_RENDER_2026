@@ -41,3 +41,22 @@ env_vars = {
   }
 }
 }
+
+resource "render_web_service" "adminer" {
+  name   = "adminer-${var.github_actor}"
+  plan   = "free"
+  region = "frankfurt"
+
+  runtime_source = {
+    image = {
+      image_url = "docker.io/adminer"
+      tag       = "latest"
+    }
+  }
+
+  env_vars = {
+    ADMINER_DEFAULT_SERVER = {
+      value = "dpg-d758vvoule4c73fghaa0-a.frankfurt-postgres.render.com/database_4h7f"
+    }
+  }
+}
