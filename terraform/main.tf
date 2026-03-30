@@ -30,14 +30,11 @@ resource "render_web_service" "flask_app" {
   }
 
 env_vars = {
-  ENV = {
-    value = "production"
-  }
-}
-
-env_vars = {
   DATABASE_URL = {
     value = "postgresql://database_4h7f_user:1TfhDtGeVoIOVbVtudBRElkeiXUzxfb6@dpg-d758vvoule4c73fghaa0-a.frankfurt-postgres.render.com/database_4h7f"
+  }
+  ENV = {
+    value = "production"
   }
 }
 }
